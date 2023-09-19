@@ -1,0 +1,218 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+<!--***************************-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+    <title>html5篇：网页开发笔记</title>
+    <style>
+        .daohang a {
+            /*横向导航*/
+            display: inline-block;
+            /*允许设置宽度和高度*/
+            text-decoration: none;
+            /*取消下划线*/
+            width: 120px;
+            height: 58px;
+            text-align: center;
+            line-height: 58px;
+            /*让文字行高=盒子行高 实现居中*/
+            color: #f9faf9;
+        }
+
+        .daohang .beijin {
+            /*横向导航的背景图片*/
+            background: url(images/导航按钮.png) no-repeat;
+        }
+
+        .daohang .beijin:hover {
+            /*按下去的特效*/
+            background: url(images/导航按钮-2.png) no-repeat;
+        }
+
+        table {
+            width: 500px;
+            height: 50px;
+
+        }
+
+        table,
+        td,
+        th {
+            /*合并写法*/
+            border: 1px solid rgba(0, 111, 238, 0.212);
+            border-collapse: collapse;
+            /*合并相邻的边框*/
+            font-size: 14px;
+            /*字体大小*/
+            text-align: center;
+
+        }
+    </style>
+
+
+
+
+</head>
+
+<body!-->
+    <h1 class="headline">
+        <em>html5篇：网页开发笔记</em>
+    </h1>
+
+    <div class="daohang">
+        <a href="index.html" class="beijin">首页</a>
+        <a href="#开发技术一览" class="beijin">开发技术一览</a>
+        <a href="#单标签类" class="beijin">单标签类</a>
+        <a href="#文本样式类" class="beijin">文本样式类</a>
+        <a href="#图片类" class="beijin">图片类</a>
+        <a href="#链接类" class="beijin">链接类</a>
+        <a href="#表格类" class="beijin">表格类</a>
+        <a href="#列表类" class="beijin">列表类</a>
+        <a href="#表单类" class="beijin">表单类</a>
+        <a href="#其他类" class="beijin">其他类</a>
+
+    </div>
+
+
+
+    <!-- ******************************* -->
+    <h2 id="开发技术一览">开发技术一览</h2>
+    <table align="center" cellpadding="20" cellspacing="0"> <!-- cellpadding边框和边框的距离 -->
+        <tr>
+            <th>图标</th>
+            <th>技术</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td><img src="images/html5.jfif" width="100"></td>
+            <td><a href="#">html5</a></td>
+            <td>基于标签实现网页框架</td>
+        </tr>
+        <tr>
+            <td><img src="images/css3.jfif" width="100" height="130"></td>
+            <td><a href="#">css3</a></td>
+            <td>网页美化</td>
+        </tr>
+        <tr>
+            <td><img src="images/javascrip5.jfif" width="100"></td>
+            <td><a href="#">javascrip5</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <p></p>
+    <h2 id="单标签类">单标签类：</h2>
+    br break 换行(单标签) <br>
+
+    <p></p>
+    <h2 id="文本样式类">文本样式类：</h2>
+    div divide 划分出一整行的空间<br>
+    span 跨度宽度 划分出一小块空间<br>
+    br break 换行(单标签) <br>
+    p paragraph 段落<br>
+    h1~6 head 标题等级<br>
+    strong 文字加粗<br>
+    em emphasis 倾斜强调<br>
+    del delete 删除线<br>
+    u underline 下划线<br>
+
+    <p></p>
+    <h2 id="图片类">图片类：</h2>
+    src source 资源<br>
+    URL： Uniform Resource Locator 文件路径<br>
+    img基础: &lt img src="图像名.格式+URL" >在同一文件路径下不用写URL<br>
+    title 图片提示内容 &lt img src="图像名.格式+URL" title="图片提示内容"><br>
+    alt 图片显示不出来的时候的替换 &lt img src="图像名.格式+URL" alt="替换内容"><br>
+    width height 设置长宽数值<br>
+    border 设置边框粗细数值(html不太支持，一般通过css)<br>
+
+
+    <p></p>
+    <h2 id="链接类">链接类：</h2>
+    a anchor 锚<br>
+    href Hypertext Reference 超文本链接（URL填写#，则为空链接）<br>
+    target 不填写默认为_self(覆盖原窗口) 填写_blank为打开新窗口<br>
+    &lt a href="URL" target="类型">内容(文字，图片...) &lt/a><br>
+    定位网页内部词条 herf中填入对应词条id图片类 然后对应标题标签中写入id &lt h2 id="图片类">图片类：&lt/h2><br>
+
+    <p></p>
+    <h2 id="表格类">表格类：</h2>
+    table 表格<br>
+    tr table row 行
+    th table heah 表头(相当于文字加粗)<br>
+    td table data(表格数据)<br>
+    thead 表头区域 必须有tr<br>
+    tbody 表体<br>
+    <h3>需要填入:</h3>
+    <h3>种类一:</h3>
+    实例： &lt table align="center" .....>&lt/table> <br>
+    align 排列(对齐) left center right<br>
+    border 默认无边框 有边框：1<br>
+    cellpadding 文字和边框的距离 填入数值<br>
+    cellspacing 边框和边框的距离 填入数值<br>
+    width 填数<br>
+    height 填数<br>
+    <h3>种类二:</h3>
+    实例：&lt td colspan="跨越合并的数量">&lt/td> <br>
+    rowspan 跨越行合并<br>
+    colspan 跨越列合并<br>
+
+    <p></p>
+    <h2 id="列表类">列表类：</h2>
+    无序列表格式<br>
+    &lt ul><br>
+    &lt li> 内容 &lt /li><br>
+    &lt li> 内容 &lt /li><br>
+    &lt/ul><br>
+    有序列表格式<br>
+    同上 ul换成ol<br>
+    自定义列表<br>
+    &lt dl><br>
+    &lt dt> 列头内容 &lt /dt><br>
+    &lt dd> 子内容 &lt /dd><br>
+    &lt dd> 子内容 &lt /dd><br>
+    &lt/dl><br>
+
+    <p></p>
+    <h2 id="表单类">表单类：</h2>
+    格式<br>
+    <strong>&lt form action=" " method=" " name=" " ></strong><br>
+    //action:url服务器接收地址 <br>
+    //method:提交方式get或post <br>
+    //name:表单名 <br>
+    <strong>联系方式： &lt input type=" " name=" " value=" " checked=" " maxlength=" "></strong><br>
+    //表单按钮控件<br>
+    //type:text长方框 password字符隐藏框 radio 单选勾选 checkbox 多选框<br>
+    //type:submit 提交按钮 reset 清空表单所有数据 button 可以点击的按钮(和js一起) file 上传文件<br>
+    //name 控件指定命名 防止提交信息混乱 单选框和多选框的name要相同<br>
+    //value 仅仅对于部分可显示框内提示 其他value是为程序员后台看<br>
+    //checked 填入checked对于单选和多选的默认选中<br>
+    //maxlength text最多输入的字符数量 <br>
+    <strong> &lt input type=" " id="男生"></strong><br>
+    <strong> &lt label for="男生">锚点名&lt /label></strong><br>
+    //通过label与控件的id建立联系 直接点击锚点名直接跳转到控件内部<br>
+    //下拉列表格式<br>
+    <strong> &lt select> </strong><br>
+    <strong> &lt option >安南 &lt/option> </strong><br>
+    <strong> &lt option >北漠 &lt/option> </strong><br>
+    <strong> &lt option >中土 &lt/option> </strong><br>
+    <strong> &lt option select="select" >京都 &lt/option> </strong><br>
+    //select="select" 默认的下拉列表选项
+    <strong> &lt /select> </strong><br>
+    //文本域格式(产生大的文本方框：一般用于写留言)<br>
+    <strong> &lt textarea> </strong><br>该框写留言<br><strong> &lt /textarea> </strong><br>
+    <strong>&lt /form></strong><br>
+
+
+    <p></p>
+    <h2 id="其他类">其他类：</h2>
+    特殊字符<br>
+    <img src="images/特殊字符.png" width="500" height="500">
+    </body>
+
+</html>

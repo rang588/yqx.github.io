@@ -1,0 +1,141 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+    <title>实用软件</title>
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            /*网页主标题div的盒子模型*/
+            background-image: url(images/紫发刘海.jpg);
+            /*引入背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片不重复*/
+            background-position: 800px 20px;
+            /*背景图片位置*/
+            height: 100px;
+            background-color: rgba(204, 73, 13, 0.849);
+            line-height: 100px;
+            text-align: center;
+
+
+        }
+
+        .daohang {
+            /*div的盒子模型 导航链接栏*/
+            height: 50px;
+
+            border-top: 2px solid #e96a0379;
+            /*上边框*/
+            border-bottom: 1px solid #000;
+            background-color: antiquewhite;
+            line-height: 50px;
+            /*垂直居中*/
+        }
+
+        .daohang a {
+            display: inline-block;
+            /*a属于行内元素，没有高度，转化为行内块元素*/
+            /* height: 40px; */
+            padding: 0 20px;
+            /*分别与上下的间隔 左右a的间隔*/
+            font-size: 16px;
+            color: rgb(202, 79, 161);
+        }
+
+        .daohang a:hover {
+            color: rgb(22, 207, 130);
+            background-color: rgb(73, 15, 207);
+
+        }
+
+        .max-exter-box {
+            /*最大外套盒子*/
+            width: 1500px;
+            height: 1500px;
+            background-color: #cbd1cc;
+            margin: 0 auto;
+            /*外壳居中*/
+        }
+
+        .max-exter-box a {
+            /*精致立体按钮*/
+            float: left;
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            display: block;
+            color: rgb(94, 89, 89);
+            border-style: outset;
+            border-width: 8px;
+            /*边框粗细*/
+            background-color: rgb(161, 161, 163);
+            border-color: #bbbbb7ee;
+            margin: 50px;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        .max-exter-box a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(67, 165, 136);
+            box-shadow: 10px 10px 10px 2px rgb(167, 149, 149);
+            /*阴影的x位置，阴影的y位置，模糊程度，阴影大小，阴影颜色*/
+        }
+
+
+        /***********--------------------------------********************/
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box">
+        <em class="headline">实用软件</em>
+    </div>
+
+    <div class="daohang">
+        <a href="..\index.html">返回首页</a>
+
+    </div>
+
+    <div class="max-exter-box">
+        <a href="..\下载资源\TeamViewer.zip">TeamViewer</a>
+        <a href="..\下载资源\Bandizip Plus.zip">Bandizip专业版</a>
+        <a href="..\下载资源\科学上网：安易.zip">科学上网：安易</a>
+        <a href="..\下载资源\小强cloud-vpn.exe">科学上网：cloud</a>
+        <a href="..\下载资源\抢票神器.zip">抢票神器</a>
+        <a href="..\下载资源\office激活.zip">office激活</a>
+        
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

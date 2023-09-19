@@ -1,0 +1,202 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js实验室</title>
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+            color: #e609c8;
+        }
+
+        .box {
+            /*网页主标题div的盒子模型*/
+
+            background-image: url(images/紫发刘海.jpg);
+            /*引入背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片不重复*/
+            background-position: 800px 20px;
+            /*背景图片位置*/
+            height: 100px;
+            background-color: rgba(68, 90, 99, 0.849);
+            line-height: 100px;
+            text-align: center;
+
+
+        }
+
+        .daohang {
+            /*div的盒子模型 导航链接栏*/
+
+            height: 50px;
+
+            border-top: 2px solid #e96a0379;
+            /*上边框*/
+            border-bottom: 1px solid #000;
+            background-color: antiquewhite;
+            line-height: 50px;
+            /*垂直居中*/
+        }
+
+        .daohang a {
+            display: inline-block;
+            /*a属于行内元素，没有高度，转化为行内块元素*/
+            /* height: 40px; */
+            padding: 0 20px;
+            /*分别与上下的间隔 左右a的间隔*/
+            font-size: 16px;
+            color: rgb(202, 79, 161);
+        }
+
+        .daohang a:hover {
+            color: rgb(22, 207, 130);
+            background-color: rgb(73, 15, 207);
+
+        }
+
+        .max-exter-box {
+            /*最大外套盒子*/
+            overflow: hidden;
+            /*消除浮动影响*/
+            width: 1190px;
+            background-color: #c9c9c9;
+            margin: 0 auto;
+            /*外壳居中*/
+
+        }
+
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        .one {
+            color: #bcbfc0;
+            height: 150px;
+            font-size: 50px;
+            text-align: center;
+
+        }
+
+        .anniu {
+            float: left;
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            display: block;
+            color: rgb(94, 89, 89);
+            border-style: outset;
+            border-width: 8px;
+            /*边框粗细*/
+            background-color: rgb(161, 161, 163);
+            border-color: #bbbbb7ee;
+            margin: 50px;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        .anniu:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(67, 165, 136);
+            box-shadow: 10px 10px 10px 2px rgb(167, 149, 149);
+            /*阴影的x位置，阴影的y位置，模糊程度，阴影大小，阴影颜色*/
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="box">
+        <em class="headline">js实验室</em>
+    </div>
+
+    <div class="daohang">
+        <a href="index.html">返回首页</a>
+        <a href="实验室.html">实验室</a>
+    </div>
+
+
+
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+
+    <!-- anniu.disabled=true没有禁用按钮（中文回答） -->
+    <div class="max-exter-box">
+        <div class="one" id="one"></div>
+        <button id="anniu" class="anniu" onclick="choujiang()">占卜</button>
+        <div id="cnt">占卜次数：3次</div>
+    </div>
+
+    <script>
+
+        // *************抽奖函数区****************
+        let co = 3, score = 0
+        function choujiang() {//co为抽奖次数
+            if (co == 0) { alert(`占卜次数已经用完,运势总分：${score}`); return; }
+            let anniu = document.getElementById('anniu')
+            let award = ['上上签：鸿蒙好运', '上签：小吉小利', '中上签：小吉', '中签：平平常常', '中下签：小凶', '下签：运势凶险', '下下签：黑脸非酋']
+            let t = document.getElementById('one')
+            let random = Math.random() * 100
+            if (random >= 85.68) t.innerHTML = award[0], one.style.backgroundColor = "#b905dd", score += 6, alert(`运势得分+6`)
+            else if (random >= 71.40) t.innerHTML = award[1], one.style.backgroundColor = "#13ecb6", score += 3, alert(`运势得分+3`)
+            else if (random >= 57.12) t.innerHTML = award[2], one.style.backgroundColor = "#04fa4e", score += 1, alert(`运势得分+1`)
+            else if (random >= 42.84) t.innerHTML = award[3], one.style.backgroundColor = "gray", score += 0, alert(`运势得分无变化`)
+            else if (random >= 28.56) t.innerHTML = award[4], one.style.backgroundColor = "#dd5a5a", score -= 1, alert(`运势得分-1`)
+            else if (random >= 14.28) t.innerHTML = award[5], one.style.backgroundColor = "#ff0000", score -= 3, alert(`运势得分-3`)
+            else t.innerHTML = award[6], one.style.backgroundColor = "#140101", score -= 6, alert(`运势得分-6`)
+            console.log(random)
+            co--
+            let cnt = document.getElementById('cnt')
+            cnt.innerHTML = `占卜次数: ${co}次`
+            anniu.innerHTML = `冷却中`
+            //启动定时冷却
+            anniu.disabled = true
+            icetime(4)
+        }
+
+        function icetime(i) {
+            let t = setInterval(function () {
+                i--
+                anniu.innerHTML = `冷却中(${i})`
+                if (i == -1) {
+                    clearInterval(t);
+                    anniu.disabled = false;
+                    if (co == 0) anniu.innerHTML = `运势结算`;
+                    else anniu.innerHTML = `占卜`;
+                }
+
+
+            }, 1000)
+
+        }
+    // *************抽奖函数区****************
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js实验室</title>
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+            color: #e609c8;
+        }
+
+        .box {
+            /*网页主标题div的盒子模型*/
+
+            background-image: url(images/紫发刘海.jpg);
+            /*引入背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片不重复*/
+            background-position: 800px 20px;
+            /*背景图片位置*/
+            height: 100px;
+            background-color: rgba(68, 90, 99, 0.849);
+            line-height: 100px;
+            text-align: center;
+
+
+        }
+
+        .daohang {
+            /*div的盒子模型 导航链接栏*/
+
+            height: 50px;
+
+            border-top: 2px solid #e96a0379;
+            /*上边框*/
+            border-bottom: 1px solid #000;
+            background-color: antiquewhite;
+            line-height: 50px;
+            /*垂直居中*/
+        }
+
+        .daohang a {
+            display: inline-block;
+            /*a属于行内元素，没有高度，转化为行内块元素*/
+            /* height: 40px; */
+            padding: 0 20px;
+            /*分别与上下的间隔 左右a的间隔*/
+            font-size: 16px;
+            color: rgb(202, 79, 161);
+        }
+
+        .daohang a:hover {
+            color: rgb(22, 207, 130);
+            background-color: rgb(73, 15, 207);
+
+        }
+
+        .max-exter-box {
+            /*最大外套盒子*/
+            overflow: hidden;
+            /*消除浮动影响*/
+            width: 1190px;
+            background-color: #c9c9c9;
+            margin: 0 auto;
+            /*外壳居中*/
+
+        }
+
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        .game-boxposition-1 {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(238, 238, 238, 0.781);
+            display: flex;
+            /*子绝父相*/
+        }
+
+        .game-brith {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .game-run-wenzi-box {
+            flex: 1;
+
+        }
+
+        .game-run-wenzi {
+            outline: none;
+            /*隐藏文本域自带边框*/
+            border-color: transparent;
+            /*自定义边框颜色透明*/
+            background-color: #252727;
+            color: #e6f0ee;
+            width: 600px;
+            height: 100%;
+            /* background-color: #450569; */
+            resize: none;
+            /*禁止用户通过拖拽元素的边缘来改变其尺寸*/
+        }
+
+        .game-property {
+            flex: 1;
+            background-color: #3d3d3c;
+        }
+
+        .game-property-row {
+            width: 100%;
+            height: 40px;
+            background-color: #afafaf88;
+        }
+
+        .game-property-row-head {
+            width: 100%;
+            height: 40px;
+            background-color: #afafaf88;
+        }
+
+        .game-property-native-random {
+            user-select: none;
+            /*禁止用户选中*/
+            width: 35px;
+            float: right;
+            margin-top: 5px;
+            cursor: pointer;
+            /*鼠标样式为手指*/
+        }
+
+        .game-property-native-add {
+            user-select: none;
+            /*禁止用户选中*/
+            width: 20px;
+            float: right;
+            margin-top: 6px;
+            cursor: pointer;
+            /*鼠标样式为手指*/
+
+        }
+
+        .game-property-native-sub {
+            user-select: none;
+            /*禁止用户选中*/
+            width: 20px;
+            float: right;
+            margin-top: 6px;
+            cursor: pointer;
+            /*鼠标样式为手指*/
+        }
+
+        .game-property-native {
+            /*天赋*/
+            float: left;
+            color: #efebf0;
+            margin: 5px;
+        }
+
+        .game-property-IQ {
+            float: left;
+            color: rgb(80, 5, 179);
+            margin: 5px;
+
+        }
+
+        .game-property-EQ {
+            float: left;
+            color: rgb(228, 15, 200);
+            margin: 5px;
+        }
+
+        .game-property-power {
+            float: left;
+            color: rgb(255, 13, 13);
+            margin: 5px;
+        }
+
+        .game-property-economic {
+            float: left;
+            color: rgb(247, 243, 7);
+            margin: 5px;
+        }
+
+        .game-property-lin {
+            float: left;
+            color: rgb(34, 34, 31);
+            margin: 5px;
+        }
+
+        .game-information {
+            width: 100%;
+            height: 288px;
+            background-color: #e9910d;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-information-row {
+            display: flex;
+            width: 100%;
+            height: 30px;
+            background-color: #7a7575;
+            border-color: #7907bb;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        .game-information-row-word {
+            color: #08f190;
+        }
+
+        .game-information-row-button {
+            display: none;
+            background-color: #aa0b0b;
+        }
+
+        .anniu {
+            user-select: none;
+            /*禁止用户选中文字*/
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            display: block;
+            color: rgb(94, 89, 89);
+            border-style: outset;
+            border-width: 8px;
+            /*边框粗细*/
+            background-color: rgb(161, 161, 163);
+            border-color: #bbbbb7ee;
+            margin: 50px;
+            text-align: center;
+            line-height: 45px;
+            cursor: pointer;
+            /*鼠标样式为手指*/
+        }
+
+        .anniu:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(67, 165, 136);
+            box-shadow: 10px 10px 10px 2px rgb(167, 149, 149);
+            /*阴影的x位置，阴影的y位置，模糊程度，阴影大小，阴影颜色*/
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="box">
+        <em class="headline">游戏开发</em>
+    </div>
+
+    <div class="daohang">
+        <a href="../index.html">返回首页</a><!--  ../访问父目录 -->
+    </div>
+
+
+
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+
+    <div class="max-exter-box">
+
+
+
+        <div class="game-boxposition-1">
+
+
+            <!---------------诞生模块------------------>
+            <div class="game-brith">
+                <div class="anniu">诞生</div>
+            </div>
+
+            <!--------------天赋点模块------------------>
+            <div class="game-property">
+
+                <div class="game-property-row-head">
+                    <div class="game-property-native">天赋点:20</div>
+                </div>
+
+                <div class="game-property-row " data-id=0>
+                    <div class="game-property-IQ">智慧:0</div>
+                    <button class="game-property-native-random">后天</button>
+                    <button class="game-property-native-sub">-</button>
+                    <button class="game-property-native-add">+</button>
+                </div>
+
+                <div class="game-property-row" data-id=1>
+                    <div class="game-property-EQ">情商:0</div>
+                    <button class="game-property-native-random">后天</button>
+                    <button class="game-property-native-sub">-</button>
+                    <button class="game-property-native-add">+</button>
+                </div>
+
+                <div class="game-property-row" data-id=2>
+                    <div class="game-property-power">体魄:0</div>
+                    <button class="game-property-native-random">后天</button>
+                    <button class="game-property-native-sub">-</button>
+                    <button class="game-property-native-add">+</button>
+                </div>
+
+                <div class="game-property-row" data-id=3>
+                    <div class="game-property-economic">家境:0</div>
+                    <button class="game-property-native-random">后天</button>
+                    <button class="game-property-native-sub">-</button>
+                    <button class="game-property-native-add">+</button>
+                </div>
+
+                <div class="game-property-row" data-id=4>
+                    <div class="game-property-lin">灵根:0</div>
+                    <button class="game-property-native-random">后天</button>
+                    <button class="game-property-native-sub" data-id="">-</button>
+                    <button class="game-property-native-add">+</button>
+                </div>
+
+
+
+
+            </div>
+
+            <!----------------------文字输出模块---------------------------------------->
+            <div class="game-run-wenzi-box">
+                <textarea class="game-run-wenzi" readonly></textarea>
+
+            </div>
+            <!-- ------------------------------------------------------ -->
+
+
+        </div>
+
+
+        <!--信息属性栏-->
+        <div class="game-information">
+            <div class="game-information-row" id="姓名">姓名: ？？？</div>
+            <div class="game-information-row" id="寿元">年龄 ： ？？？ / 寿元 : ？？？ </div>
+
+            <div class="game-information-row" >
+                <div class="game-information-row-word" id="境界">
+                    境界：？？？
+                </div>
+
+            </div>
+
+
+            <div class="game-information-row" id="体质">体质血脉：？？？</div>
+            <div class="game-information-row">宗门：？？？</div>
+            <div class="game-information-row">修炼功法：？？？</div>
+            <div class="game-information-row">战斗功法：？？？</div>
+            <div class="game-information-row">法宝：？？？</div>
+            <div class="game-information-row">防具：？？？</div>
+
+            <div class="game-information-row">
+                <div class="game-information-row-word" id="修行值">
+                    修行值：？？？
+                </div>
+                <button class="game-information-row-button" id="突破">
+                    突破
+                </button>
+            </div>
+            <div class="game-information-row" id="总战斗力">总战斗力：0</div>
+        </div>
+
+
+    </div>
+    <!-- 1-100 -->
+
+
+
+
+    <script src="天赋点加减.js"></script>
+    <script src="灵根及体质.js"></script>
+    <script src="年龄.js"></script>
+    <script src="姓名.js"></script>
+    <script src="战斗力.js"></script>
+    <script src="境界.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01号实验</title>
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            /*网页主标题div的盒子模型*/
+            background-image: url(images/紫发刘海.jpg);
+            /*引入背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片不重复*/
+            background-position: 800px 20px;
+            /*背景图片位置*/
+            height: 100px;
+            background-color: rgba(68, 90, 99, 0.849);
+            line-height: 100px;
+            text-align: center;
+
+
+        }
+
+        .daohang {
+            /*div的盒子模型 导航链接栏*/
+            height: 50px;
+
+            border-top: 2px solid #e96a0379;
+            /*上边框*/
+            border-bottom: 1px solid #000;
+            background-color: antiquewhite;
+            line-height: 50px;
+            /*垂直居中*/
+        }
+
+        .daohang a {
+            display: inline-block;
+            /*a属于行内元素，没有高度，转化为行内块元素*/
+            /* height: 40px; */
+            padding: 0 20px;
+            /*分别与上下的间隔 左右a的间隔*/
+            font-size: 16px;
+            color: rgb(202, 79, 161);
+        }
+
+        .daohang a:hover {
+            color: rgb(22, 207, 130);
+            background-color: rgb(73, 15, 207);
+
+        }
+
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+
+
+        .leftside-advertise {
+            /*左侧边广告栏*/
+            background-color: #fd0000;
+            float: left;
+            width: 261px;
+            height: 806px;
+        }
+
+        .rightside-advertise {
+            /*右侧边广告栏*/
+            float: right;
+            width: 261px;
+            height: 806px;
+
+
+        }
+
+        /************************************************************************************/
+        .max-exter-box {
+            /*最大外套盒子*/
+            width: 1190px;
+            /*不给父盒子高度，让子盒子撑开父盒子*/
+            overflow: hidden;
+            /*消除浮动影响*/
+            background-color: #f8f2f228;
+            margin: 0 auto;
+            /*外壳居中*/
+        }
+
+        /************************************************************************************/
+        .head-box {
+            /*头盒子*/
+            height: 52px;
+            background-color: #faf9f5;
+
+
+        }
+
+        .head-core-box {
+            /*头盒子核心部分*/
+            width: 1190px;
+            /*不给父盒子高度，让子盒子撑开父盒子*/
+            height: 52px;
+            background-color: #12e0c428;
+            margin: 0 auto;
+            /*外壳居中*/
+        }
+
+        .head-divide-box {
+            /*头盒子分区部分*/
+            position: absolute;
+            display: flex;
+            height: 52px;
+            background-color: #2e0dec;
+            line-height: 52px;
+
+        }
+
+        .head-list-box {
+            /*头盒子列表分区部分*/
+            /*用li圈住a防止搜索引擎认为堆砌链接降低权重*/
+            display: flex;
+            list-style: none;
+            margin-left: 150px;
+
+        }
+
+        .head-list-box li {
+            margin: 0 2px;
+        }
+
+        .head-list-box li:hover {
+            border-bottom: 3px solid #2f99c4;
+        }
+
+        .head-list-box li a {
+            /*头盒子列表分区部分*/
+            height: 52px;
+            padding: 0 10px;
+            line-height: 52px;
+            font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+            font-size: 15px;
+            color: #72b8a0;
+
+        }
+
+
+
+
+        /************************************************************************************/
+        .exter-box {
+            /*商品盒子*/
+
+            margin: 8px;
+            float: left;
+            width: 220px;
+            height: 360px;
+            background-color: #f0efef;
+        }
+
+        .exter-box:hover {
+            /*动态聚焦阴影*/
+            box-shadow: 10px 10px 10px 2px rgb(167, 149, 149);
+            /*阴影的x位置，阴影的y位置，模糊程度，阴影大小，阴影颜色*/
+        }
+
+        .exter-box img {
+            width: 100%;
+            /*让图片与父亲一样宽*/
+        }
+
+        /************************************************************************************/
+        .inter-box-01 {
+            height: 37px;
+            text-align: center;
+            margin: 20px 45px;
+            /*上下边距 左右边距 已经清除默认边框，加边框距离不会撑大盒子*/
+        }
+
+        .inter-box-01 a {
+            font-size: 16px;
+            font-weight: 900;
+            /*文字粗细*/
+            color: #000;
+        }
+
+        .inter-box-01 a:hover {
+            color: #4b8bb6;
+        }
+
+        .inter-box-02 {
+            height: 37px;
+            text-align: center;
+        }
+
+        .inter-box-02 a {
+            color: #a3a1a1;
+        }
+
+        .inter-box-02 a:hover {
+            color: #4b8bb6;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="box">
+        <em class="headline">01号实验</em>
+    </div>
+
+    <div class="daohang">
+        <a href="index.html">返回首页</a>
+        <a href="实验室.html">实验室</a>
+    </div>
+
+
+
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+
+    <div class="head-box">
+        <div class="head-core-box">
+
+            <!--  -->
+            <div class="head-divide-box"><img src="images/logo.png"></div>
+            <ul class="head-list-box">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">热销榜</a></li>
+                <li><a href="#">折扣优惠</a></li>
+                <li><a href="#">新品专场</a></li>
+            </ul>
+
+            <!--  -->
+
+        </div>
+
+    </div>
+
+
+    <div class="leftside-advertise">
+        <a href="#"><img src="images/手机长广告.png"></a>
+    </div>
+
+    <div class="rightside-advertise">
+        <a href="#"><img src="images/手机长广告.png"></a>
+    </div>
+
+    <div class="max-exter-box">
+
+
+
+        <div class="exter-box">
+            <a href="#"><img src="images/T恤.jpg"></a>
+            <div class="inter-box-01"><a href="#">潮流韩款简约情侣清新可爱夏季款</a></div>
+            <div class="inter-box-02"><a href="#">种花家小店 | 月销量1000+</a></div>
+        </div>
+
+        <div class="exter-box">
+            <a href="#"><img src="images/待上架商品位.png"></a>
+            <div class="inter-box-01"><a href="#">待上架商品位</a></div>
+            <div class="inter-box-02"><a href="#">小店等待入驻 | 月销量暂无描述</a></div>
+        </div>
+
+        <div class="exter-box">
+            <a href="#"><img src="images/待上架商品位.png"></a>
+            <div class="inter-box-01"><a href="#">待上架商品位</a></div>
+            <div class="inter-box-02"><a href="#">小店等待入驻 | 月销量暂无描述</a></div>
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

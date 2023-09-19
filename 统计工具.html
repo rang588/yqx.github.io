@@ -1,0 +1,225 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js实验室</title>
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+            color: #e609c8;
+        }
+
+        .box {
+            /*网页主标题div的盒子模型*/
+
+            background-image: url(images/紫发刘海.jpg);
+            /*引入背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片不重复*/
+            background-position: 800px 20px;
+            /*背景图片位置*/
+            height: 100px;
+            background-color: rgba(68, 90, 99, 0.849);
+            line-height: 100px;
+            text-align: center;
+
+
+        }
+
+        .daohang {
+            /*div的盒子模型 导航链接栏*/
+
+            height: 50px;
+
+            border-top: 2px solid #e96a0379;
+            /*上边框*/
+            border-bottom: 1px solid #000;
+            background-color: antiquewhite;
+            line-height: 50px;
+            /*垂直居中*/
+        }
+
+        .daohang a {
+            display: inline-block;
+            /*a属于行内元素，没有高度，转化为行内块元素*/
+            /* height: 40px; */
+            padding: 0 20px;
+            /*分别与上下的间隔 左右a的间隔*/
+            font-size: 16px;
+            color: rgb(202, 79, 161);
+        }
+
+        .daohang a:hover {
+            color: rgb(22, 207, 130);
+            background-color: rgb(73, 15, 207);
+
+        }
+
+        .max-exter-box {
+            /*最大外套盒子*/
+            overflow: hidden;
+            /*消除浮动影响*/
+            width: 1190px;
+            background-color: #c9c9c9;
+            margin: 0 auto;
+            /*外壳居中*/
+
+        }
+
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        .warpper-in {
+            width: 100%;
+            height: 300px;
+            background-color: #807575;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .warpper-in-text {
+            resize: none;
+            /*禁止用户通过拖拽元素的边缘来改变其尺寸*/
+            outline: none;
+            /*隐藏文本域自带边框*/
+            font-size: 15px;
+            height: 200px;
+            flex: 10;
+        }
+
+        .warpper-in-anniu {
+            height: 100px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 20px;
+            flex: 2;
+        }
+
+        .warpper-out {
+            width: 100%;
+            height: 300px;
+            background-color: #87858a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .warpper-out-text {
+            resize: none;
+            /*禁止用户通过拖拽元素的边缘来改变其尺寸*/
+            outline: none;
+            /*隐藏文本域自带边框*/
+            font-size: 15px;
+            height: 200px;
+            flex: 10;
+        }
+
+        .analy {
+            /*分析去重效果*/
+            width: 100%;
+            height: 50px;
+            background-color: #777272;
+            display: flex;
+            justify-content: end;
+        }
+
+        .analy-wenzi {
+            display: none;
+            color: #06ebb2;
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="box">
+        <em class="headline">js实验室</em>
+    </div>
+
+    <div class="daohang">
+        <a href="index.html">返回首页</a>
+        <a href="实验室.html">实验室</a>
+    </div>
+
+
+
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+
+    <div class="max-exter-box">
+
+        <div class="warpper-in"><!--外包装盒子-in-->
+            <textarea class="warpper-in-text" placeholder="请输入关键字" id="text1"></textarea>
+            <textarea class="warpper-in-text" placeholder="请输入文本" id="text2"></textarea>
+            <button class="warpper-in-anniu" id='anniu1'>统计关键字数量</button>
+        </div>
+
+
+        <div class="analy">
+            <span class="analy-wenzi" id="analy-count">关键字出现次数： 0</span>
+        </div>
+
+
+    </div>
+
+
+
+    </div>
+
+    <script>
+        let inanniu1 = document.querySelector('#anniu1')//获取统计按钮
+        let inanniu2 = document.querySelector('#anniux')//获取清零按钮
+        let intext1 = document.querySelector('#text1')//获取关键字文本域
+        let intext2 = document.querySelector('#text2')//获取输入文本域
+        let analyset = document.querySelector('#analy-count')//获取分析
+
+        inanniu1.addEventListener('click', function () {
+            let word = intext1.value//将关键字存储于一个变量
+            let text =intext2.value//将文本存储于一个变量
+            let regex = new RegExp(word, "g");
+            let wordcount = 0//关键字数量
+
+            while (regex.exec(text)) {
+                wordcount++;
+            }
+
+            analyset.style.display = 'block'
+            analyset.innerHTML = `【分析结果】 关键字『${intext1.value}』的数量为: 『${wordcount}』`
+        })
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

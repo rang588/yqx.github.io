@@ -1,0 +1,316 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03号实验</title>
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            /*网页主标题div的盒子模型*/
+
+            background-image: url(images/紫发刘海.jpg);
+            /*引入背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片不重复*/
+            background-position: 800px 20px;
+            /*背景图片位置*/
+            height: 100px;
+            background-color: rgba(68, 90, 99, 0.849);
+            line-height: 100px;
+            text-align: center;
+
+
+        }
+
+        .daohang {
+            /*div的盒子模型 导航链接栏*/
+
+            height: 50px;
+
+            border-top: 2px solid #e96a0379;
+            /*上边框*/
+            border-bottom: 1px solid #000;
+            background-color: antiquewhite;
+            line-height: 50px;
+            /*垂直居中*/
+        }
+
+        .daohang a {
+            display: inline-block;
+            /*a属于行内元素，没有高度，转化为行内块元素*/
+            /* height: 40px; */
+            padding: 0 20px;
+            /*分别与上下的间隔 左右a的间隔*/
+            font-size: 16px;
+            color: rgb(202, 79, 161);
+        }
+
+        .daohang a:hover {
+            color: rgb(22, 207, 130);
+            background-color: rgb(73, 15, 207);
+
+        }
+
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        /*************************************以下css均为实验区域***********************************************/
+        .max-exter-box {
+            /*最大外套盒子*/
+            overflow: hidden;
+            /*消除浮动影响*/
+            width: 1190px;
+            background-color: #c9c9c9;
+            margin: 0 auto;
+            /*外壳居中*/
+
+        }
+
+        .exter-box {
+            /*分块盒子*/
+            margin: 8px;
+            float: left;
+            width: 220px;
+            height: 350px;
+            background-color: #faf4f4;
+        }
+
+        .exter-above-box {
+            /*分块盒子-上部*/
+
+            width: 220px;
+            height: 90px;
+            background-color: #f3eea9;
+        }
+
+        .exter-under-box {
+            /*分块盒子-下部*/
+            position: absolute;
+            /*子绝父相*/
+            width: 220px;
+            height: 260px;
+            background-color: #f5f5f2;
+        }
+
+        /**----**/
+
+        .yuan {
+            /*圆形盒子*/
+            position: relative;
+            top: 50px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /*半径大于或等于一半就是圆形*/
+            background-color: #7aa1ad;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .yuanjiao {
+            /*圆角矩形 */
+            position: relative;
+            top: 50px;
+            border-radius: 50px;
+            /*高度的一半*/
+            background-color: #046583;
+            text-align: center;
+            line-height: 100px;
+
+        }
+
+        .free {
+            /*自定义圆角*/
+            position: relative;
+            top: 50px;
+            width: 200px;
+            height: 100px;
+            border-radius: 0px 10px 20px 50px;
+            /*从左上角开始顺时针*/
+            background-color: #860eb6;
+            text-align: center;
+
+        }
+
+        .shadow {
+            /*盒子阴影*/
+            position: relative;
+            top: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: #c22b88;
+            text-align: center;
+            box-shadow: 10px 10px 10px 2px rgb(167, 149, 149);
+            /*阴影的x位置，阴影的y位置，模糊程度，阴影大小，阴影颜色*/
+        }
+
+        .d-shadow {
+            /*动态聚焦阴影*/
+            position: relative;
+            top: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: #6bb30e;
+            text-align: center;
+        }
+
+        .d-shadow:hover {
+            box-shadow: 10px 10px 10px 2px rgb(167, 149, 149);
+            /* 阴影的x位置，阴影的y位置，模糊程度，阴影大小，阴影颜色 */
+        }
+
+        .txt-shadow {
+            /*文字阴影*/
+            position: relative;
+            top: 50px;
+            width: 200px;
+            height: 200px;
+            color: #ec780cfb;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            text-shadow: 5px 5px 0px rgb(114, 106, 106);
+            /*阴影的x位置，阴影的y位置，模糊程度，阴影颜色*/
+
+        }
+
+        .fukaung {
+            /*浮框*/
+            position: relative;
+            top: 100px;
+            left: 50px;
+            width: 100px;
+            height: 50px;
+            background-color: #217dd3;
+            text-align: center;
+
+        }
+
+        .fukaung:hover {
+            left: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: #aaadb183;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="box">
+        <em class="headline">03号实验</em>
+    </div>
+
+    <div class="daohang">
+        <a href="index.html">返回首页</a>
+        <a href="实验室.html">实验室</a>
+    </div>
+
+
+
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+
+    <div class="max-exter-box">
+        <div class="exter-box">
+            <div class="exter-above-box"></div>
+            <div class="exter-under-box">
+                <div class="yuan">圆形盒子</div>
+            </div>
+        </div>
+
+        <div class="exter-box">
+            <div class="exter-above-box"></div>
+            <div class="exter-under-box">
+                <div class="yuanjiao">圆角矩形</div>
+            </div>
+        </div>
+
+        <div class="exter-box">
+            <div class="exter-above-box"></div>
+            <div class="exter-under-box">
+                <div class="free">自定义圆角</div>
+            </div>
+        </div>
+
+        <div class="exter-box">
+            <div class="exter-above-box"></div>
+            <div class="exter-under-box">
+                <div class="shadow">盒子阴影</div>
+            </div>
+        </div>
+
+        <div class="exter-box">
+            <div class="exter-above-box"></div>
+            <div class="exter-under-box">
+                <div class="d-shadow">动态聚焦阴影</div>
+            </div>
+        </div>
+
+        <div class="exter-box">
+            <div class="exter-above-box"></div>
+            <div class="exter-under-box">
+                <div class="txt-shadow">文字阴影</div>
+            </div>
+        </div>
+
+        <div class="exter-box">
+            <div class="exter-above-box"></div>
+            <div class="exter-under-box">
+                <div class="fukaung">浮框</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

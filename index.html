@@ -1,0 +1,465 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ran 导航</title>
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /*删除li的小圆点*/
+            text-decoration: none;
+        }
+
+        a {
+            /* 链接*/
+            color: #d1cad4;
+            text-decoration: none;
+
+        }
+
+
+
+        .window-box {
+            /* 窗口盒子 */
+            background-color: #706e6e;
+            width: 100%;
+            display: flex;
+
+        }
+
+
+        .max-exter-box {
+            /*最大外套盒子*/
+            height: 5665px;
+            width: 1190px;
+            background-color: #fdf6f6;
+            margin: 0 auto;
+            /*外壳居中*/
+
+        }
+
+        .navigate-box {
+            /*导航盒子*/
+            color: rgb(183, 193, 197);
+            height: 50px;
+            background-color: #464242;
+            line-height: 50px;
+            /*文字水平居中*/
+            box-shadow: 2px 5px 50px rgba(6, 1, 15, 0.479);
+            /*盒子阴影*/
+            display: flex;
+            /*flex默认按主轴排列，使得li横向排列*/
+       
+
+        }
+
+        .navigate-box-ul-1 {
+            width: 100px;
+            display: flex;
+            /*flex默认按主轴排列，使得li横向排列*/
+            margin: 0 50px;
+            
+
+
+        }
+
+        .navigate-box-li-1 {
+            text-align: center;
+       
+        }
+
+        .navigate-box-li-1:hover .navigate-box-ul-2 {
+            /*恢复隐藏的下拉列表*/
+            display: block;
+    
+        }
+
+        .navigate-box-li-1:hover {
+            background-color: #617377;
+            z-index: 1000;
+            /*在触发li的时候将z-index保证下拉列表不会被div遮挡*/
+        }
+
+        .navigate-box-ul-2 {
+            background-color: #464242;
+            box-shadow: 2px 5px 50px rgba(6, 1, 15, 0.479);
+            /*盒子阴影*/
+            display: none;
+            border-radius: 5px;
+           
+
+
+        }
+
+
+
+        .navigate-box-li-2 {
+            width: 100px;
+           
+
+        }
+
+        .navigate-box-li-2:hover {
+            background-color: rgb(18, 17, 19);
+            border-radius: 6px;
+          
+        }
+
+        .navigate-box-li-2:not(:first-child) {
+            /*设置分隔线但是排除第一个li*/
+            border-top: 1px dashed #ebedee;
+            
+        }
+
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        .slider-box {
+            background-color: #0d0c0c;
+            width: 560px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            /*将flex默认的方向改为垂直分布*/
+        }
+
+
+        .slider-wrapper {
+            /*上部images框*/
+            width: 100%;
+            height: 320px;
+        }
+
+        .slider-wrapper img {
+            /*上部images*/
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider-footer {
+            /*下部框*/
+            height: 80px;
+            background-color: rgb(202, 79, 161);
+            padding: 12px 12px 0 12px;
+            display: flex;
+        }
+
+        .slider-footer .toggle {
+            /*下部框-左右按钮框*/
+            right: 0;
+            margin-top: 10px;
+            margin-left: auto;
+            /* 将右边的项目推到右侧 */
+        }
+
+        .slider-footer .toggle button {
+            /*下部框-左右按钮框-按钮*/
+            margin-right: 12px;
+            width: 28px;
+            height: 28px;
+            appearance: none;
+            /*隐藏浏览器默认样式影响*/
+            border: none;
+            /*隐藏边框*/
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            /*鼠标样式为手指*/
+        }
+
+        .slider-footer .toggle button:hover {
+            /*下部框-左右按钮框-按钮-特效*/
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .slider-footer .present {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .slider-footer p {
+            /*下部框-文字介绍*/
+            margin: 0;
+            color: #f1ecec;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .slider-indicator {
+            /*下部框-圆点框*/
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            /*圆点横着排列*/
+        }
+
+        .slider-indicator li {
+            /*下部框-圆点*/
+            width: 8px;
+            height: 8px;
+            margin: 4px;
+            border-radius: 50%;
+            background: #85d3bf;
+            opacity: 0.4;
+            /*未激活时（实体化）值底下*/
+            cursor: pointer;
+            /*鼠标样式为手指*/
+        }
+
+        .slider-indicator li.active {
+            /*下部框-圆点-激活态*/
+            width: 12px;
+            height: 12px;
+            opacity: 1;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <!----------------------------------------以下均为html实验区域-------------------------------------------->
+    <div class="window-box">
+
+        <div class="max-exter-box">
+
+            <div class="navigate-box"><!--导航盒子-->
+                <ul class="navigate-box-ul-1">
+                    <li class="navigate-box-li-1">
+                        <h4>常用网址</h4>
+                        <ul class="navigate-box-ul-2">
+                            <li class="navigate-box-li-2"><a href="https://www.bilibili.com/">b站</a></li>
+                            <li class="navigate-box-li-2"><a href="https://www.w3school.com.cn/">w3school</a></li>
+                            <li class="navigate-box-li-2"><a href="https://www.runoob.com">菜鸟教程</a></li>
+                            <li class="navigate-box-li-2"><a href="https://www.csdn.net/">CSDN</a></li>
+                            <li class="navigate-box-li-2"><a href="https://www.icourse163.org/">mooc</a></li>
+                            <li class="navigate-box-li-2"><a href="http://i.chaoxing.com">学习通</a></li>
+                            <li class="navigate-box-li-2"><a href="https://jw.henau.edu.cn/">教务系统</a></li>
+                            <li class="navigate-box-li-2"><a href="https://chat.openai.com/chat">chatgpt</a></li>
+                            <li class="navigate-box-li-2"><a href="https://www.baidu.com/">百度</a></li>
+                            <li class="navigate-box-li-2"><a href="https://www.henau.edu.cn/">河南农业大学</a></li>
+                            <li class="navigate-box-li-2"><a href="https://github.com/">github</a></li>
+                            <li class="navigate-box-li-2"><a href="https://cet-bm.neea.edu.cn/">四六级考试</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navigate-box-ul-1">
+                    <li class="navigate-box-li-1">
+                        <h4>在线工具</h4>
+                        <ul class="navigate-box-ul-2">
+                            <li class="navigate-box-li-2"><a href="统计工具.html">统计工具</a></li>
+                            <li class="navigate-box-li-2"><a href="去重工具.html">去重工具</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navigate-box-ul-1">
+                    <li class="navigate-box-li-1">
+                        <h4>游戏开发</h4>
+                        <ul class="navigate-box-ul-2">
+                            <li class="navigate-box-li-2"><a href="占卜.html">占卜</a></li>
+                            <li class="navigate-box-li-2"><a href="命运\命运游戏.html">修仙</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navigate-box-ul-1">
+                    <li class="navigate-box-li-1">
+                        <h4>实验室</h4>
+                        <ul class="navigate-box-ul-2">
+                            <li class="navigate-box-li-2"><a href="实验室.html">实验室模型</a></li>
+                            <li class="navigate-box-li-2"><a href="山河往事.html">山河往事</a></li>
+                            <li class="navigate-box-li-2"><a href="用户注册.html">用户注册</a></li>
+                            <li class="navigate-box-li-2"><a href="01号实验.html">商品展示</a></li>
+                            <li class="navigate-box-li-2"><a href="02号实验.html">公告栏</a></li>
+                            <li class="navigate-box-li-2"><a href="03号实验.html">特效模型</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navigate-box-ul-1">
+                    <li class="navigate-box-li-1">
+                        <h4>资源中心</h4>
+                        <ul class="navigate-box-ul-2">
+                            <li class="navigate-box-li-2"><a href="资源中心\实用软件.html">实用软件</a></li>
+                            <li class="navigate-box-li-2"><a href="资源中心\游戏资源.html">游戏资源</a></li>
+                            <li class="navigate-box-li-2"><a href="资源中心\考研助手.html">考研助手</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+
+
+
+            </div>
+
+
+            <div class="slider-box">
+                <div class="slider-wrapper">
+                    <img src="images/bz01.png" alt="" />
+                </div>
+
+                <div class="slider-footer"><!--滑块下部-->
+                    <div class="present">
+                        <p>夏日运动时间</p>
+                        <ul class="slider-indicator"><!--滑块下部-圆点变化-->
+                            <li class="active" data-id=0></li>
+                            <li data-id=1></li>
+                            <li data-id=2></li>
+                            <li data-id=3></li>
+                            <li data-id=4></li>
+                            <li data-id=5></li>
+                            <li data-id=6></li>
+                            <li data-id=7></li>
+                        </ul>
+
+
+                    </div>
+
+                    <div class="toggle"><!--滑块下部-左右按钮--->
+                        <button class="prev">&lt;</button>
+                        <button class="next">&gt;</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <script>
+        let data = [
+            { url: 'images/bz01.png', title: '夏日运动时间', color: ' rgb(202, 79, 161)' },
+            { url: 'images/bz02.png', title: '夏日动画游乐场', color: ' rgb(100, 79, 161)' },
+            { url: 'images/bz03.png', title: '8月动漫新番', color: ' rgb(15, 79, 161)' },
+            { url: 'images/bz04.png', title: '星穹铁道', color: ' rgb(100, 10, 161)' },
+            { url: 'images/bz05.jpg', title: '显卡攻略指南', color: ' rgb(2, 2, 61)' },
+            { url: 'images/bz06.jpg', title: '李玉刚独家专访', color: ' rgb(22, 10, 11)' },
+            { url: 'images/bz07.jpg', title: 'steam暖雪', color: ' rgb(100, 10, 50)' },
+            { url: 'images/bz08.jpg', title: '寒假指南', color: ' rgb(10, 10, 61)' },
+        ]
+
+
+        //获取元素
+        let img = document.querySelector('.slider-wrapper img')//轮播images
+        let footer = document.querySelector('.slider-footer')//背景
+        let next = document.querySelector('.next')//右按钮
+        let prev = document.querySelector('.prev')//左按钮
+        let p = document.querySelector('.slider-footer p')//下文字
+        let slider = document.querySelector('.slider')//获取大盒子，做离开自动轮播
+
+        //左右按钮
+        let co = 0
+        next.addEventListener('click', function () {
+            co++
+            if (co >= data.length) co = 0
+            img.src = data[co].url
+            p.innerHTML = data[co].title
+            footer.style.backgroundColor = data[co].color
+            document.querySelector('.slider-indicator .active').classList.remove('active')//持续获取最新得active
+            document.querySelector(`.slider-indicator li:nth-child(${co + 1})`).classList.add('active')
+        }
+        )
+        prev.addEventListener('click', function () {
+            co--
+            if (co < 0) co = data.length - 1
+            img.src = data[co].url
+            p.innerHTML = data[co].title
+            footer.style.backgroundColor = data[co].color
+            document.querySelector('.slider-indicator .active').classList.remove('active')
+            document.querySelector(`.slider-indicator li:nth-child(${co + 1})`).classList.add('active')
+        }
+        )
+
+
+        //鼠标离开自动轮播 | 鼠标经过停止自动轮播
+        let timerId = setInterval(function () {
+            next.click()//调用元素的事件
+        }, 1300)
+
+        slider.addEventListener('mouseleave', function () {
+            timerId = setInterval(function () { next.click() }, 1300)//清除定时器时丧失了定义，重新定义     
+        })
+        slider.addEventListener('mouseenter', function () {
+            clearInterval(timerId)
+        })
+
+
+        //点击小圆点跳转
+        let liclick = document.querySelector('.slider-indicator')
+        //利用事件委托子元素向父元素冒泡实现只绑定一次（避免循环，提高性能）
+        liclick.addEventListener('click', function (e) {//必须用e生成形参对象
+            if (e.target.tagName === 'LI') {
+                let i = e.target.dataset.id
+                img.src = data[i].url
+                p.innerHTML = data[i].title
+                footer.style.backgroundColor = data[i].color
+                document.querySelector('.slider-indicator .active').classList.remove('active')
+                e.target.classList.add('active')
+                co = i
+            }
+
+
+        })
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

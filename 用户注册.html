@@ -1,0 +1,329 @@
+<!DOCTYPE html> <!--html5的格式声明-->
+<html lang="zh-CN"> <!--language声明 不影响内容 只是声明网页的国籍-->
+
+<head> <!--meta 超属性 高级属性 -->
+    <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="style.css"><!--引入css -->
+    <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
+
+    <style>
+        * {
+            /*清除各个元素的默认内外边框*/
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            /*网页主标题div的盒子模型*/
+            background-image: url(images/紫发刘海.jpg);
+            /*引入背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片不重复*/
+            background-position: 800px 20px;
+            /*背景图片位置*/
+            height: 100px;
+            background-color: rgb(183, 101, 199);
+            line-height: 100px;
+            text-align: center;
+
+
+        }
+
+        .daohang {
+            /*div的盒子模型 导航链接栏*/
+            height: 50px;
+
+            border-top: 2px solid #e96a0379;
+            /*上边框*/
+            border-bottom: 1px solid #000;
+            background-color: antiquewhite;
+            line-height: 50px;
+            /*垂直居中*/
+        }
+
+        .daohang a {
+            display: inline-block;
+            /*a属于行内元素，没有高度，转化为行内块元素*/
+            /* height: 40px; */
+            padding: 0 20px;
+            /*分别与上下的间隔 左右a的间隔*/
+            font-size: 16px;
+            color: rgb(202, 79, 161);
+        }
+
+        .daohang a:hover {
+            color: rgb(22, 207, 130);
+            background-color: rgb(73, 15, 207);
+
+        }
+
+        .max-exter-box {
+            /*最大外套盒子*/
+            width: 1500px;
+            height: 1500px;
+            background-color: #cbd1cc;
+            margin: 0 auto;
+            /*外壳居中*/
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>
+            <em>用户注册</em>
+        </h1>
+    </div>
+
+    <div class="daohang">
+        <a href="index.html">首页</a>
+    </div>
+
+
+
+    <div class="max-exter-box">
+        <table align="left" width="800" border="0">
+            <tr> <!--姓名-->
+                <td>姓名</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr><!--性别-->
+                <td>性别</td>
+                <td><label for="nan"><img src="images/男.jpg" width="30" height="30"></label><input type="radio"
+                        name="sex" id="nan">
+                    &emsp;
+                    <label for="nv"><img src="images/女.png" width="30" height="30"></label><input type="radio"
+                        name="sex" id="nv">
+                </td>
+            </tr>
+            <tr> <!--籍贯-->
+                <td>籍贯</td>
+                <td>
+                    <select>
+                        <option>--填入户籍所在地--</option>
+                        <option>安徽省</option>
+                        <option>澳门特别行政区</option>
+                        <option>北京市</option>
+                        <option>重庆市</option>
+                        <option>福建省</option>
+                        <option>甘肃省</option>
+                        <option>广东省</option>
+                        <option>广西壮族自治区</option>
+                        <option>贵州省</option>
+                        <option>海南省</option>
+                        <option>河北省</option>
+                        <option>黑龙江省</option>
+                        <option>河南省</option>
+                        <option>湖北省</option>
+                        <option>湖南省</option>
+                        <option>江苏省</option>
+                        <option>江西省</option>
+                        <option>吉林省</option>
+                        <option>辽宁省</option>
+                        <option>内蒙古自治区</option>
+                        <option>宁夏回族自治区</option>
+                        <option>青海省</option>
+                        <option>山东省</option>
+                        <option>山西省</option>
+                        <option>陕西省</option>
+                        <option>上海市</option>
+                        <option>四川省</option>
+                        <option>台湾省</option>
+                        <option>天津市</option>
+                        <option>香港特别行政区</option>
+                        <option>新疆维吾尔自治区</option>
+                        <option>西藏自治区</option>
+                        <option>云南省</option>
+                        <option>浙江省</option>
+
+                    </select>
+
+                </td>
+            </tr>
+            <tr> <!--生日-->
+                <td>生日</td>
+                <td>
+                    <select>
+                        <option>--请选择年--</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
+                        <option>2014</option>
+                        <option>2013</option>
+                        <option>2012</option>
+                        <option>2011</option>
+                        <option>2010</option>
+                        <option>2009</option>
+                        <option>2008</option>
+                        <option>2007</option>
+                        <option>2006</option>
+                        <option>2005</option>
+                        <option>2004</option>
+                        <option>2003</option>
+                        <option>2002</option>
+                        <option>2001</option>
+                        <option>2000</option>
+                        <option>1999</option>
+                        <option>1998</option>
+                        <option>1997</option>
+                        <option>1996</option>
+                        <option>1995</option>
+                        <option>1994</option>
+                        <option>1993</option>
+                        <option>1992</option>
+                        <option>1991</option>
+                        <option>1990</option>
+                        <option>1989</option>
+                        <option>1988</option>
+                        <option>1987</option>
+                        <option>1986</option>
+                        <option>1985</option>
+                        <option>1984</option>
+                        <option>1983</option>
+                        <option>1982</option>
+                        <option>1981</option>
+                        <option>1980</option>
+                        <option>1979</option>
+                        <option>1978</option>
+                        <option>1977</option>
+                        <option>1976</option>
+                        <option>1975</option>
+                        <option>1974</option>
+                        <option>1973</option>
+                        <option>1972</option>
+                        <option>1971</option>
+                        <option>1970</option>
+                        <option>1969</option>
+                        <option>1968</option>
+                        <option>1967</option>
+                        <option>1966</option>
+                        <option>1965</option>
+                        <option>1964</option>
+                        <option>1963</option>
+                        <option>1962</option>
+                        <option>1961</option>
+                        <option>1960</option>
+                        <option>1959</option>
+                        <option>1958</option>
+                        <option>1957</option>
+                        <option>1956</option>
+                        <option>1955</option>
+                        <option>1954</option>
+                        <option>1953</option>
+                        <option>1952</option>
+                        <option>1951</option>
+                        <option>1950</option>
+                    </select>
+                    <select>
+                        <option>--请选择月--</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select>
+                        <option>--请选择日--</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </td>
+            </tr>
+            <tr> <!--擅长领域-->
+                <td>擅长领域</td>
+                <td>
+                    <input type="checkbox">计算机基础理论
+                    <input type="checkbox">操作系统开发
+                    <input type="checkbox">操作系统开发
+                    <input type="checkbox">软件开发
+                    <input type="checkbox">前端UI开发
+                    <input type="checkbox" checked="checked">全部精通
+                </td>
+            </tr>
+            <tr> <!--个人简介-->
+                <td>个人简介</td>
+                <td>
+                    <textarea>简单聊聊</textarea>
+                </td>
+
+            </tr>
+            <tr> <!--提交按钮-->
+                <td></td>
+                <td><input type="submit" value="立即注册"></td>
+            </tr>
+            <tr> <!--同意协议-->
+                <td></td>
+                <td>
+                    <input type="checkbox">我已经认真阅读并同意cookie协议
+
+                </td>
+            </tr>
+            <tr> <!--承诺-->
+                <td></td>
+                <td>
+                    <h5>我承诺</h5>
+                    <ul>
+                        <li>以上信息均属于真实</li>
+                        <li>无犯罪失信不良记录</li>
+                    </ul>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
