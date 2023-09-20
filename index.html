@@ -20,7 +20,7 @@
 
         a {
             /* 链接*/
-            color: #d1cad4;
+            color: #f7f6f8;
             text-decoration: none;
 
         }
@@ -29,7 +29,7 @@
 
         .window-box {
             /* 窗口盒子 */
-            background-color: #706e6e;
+            background-color: #e4e4e4;
             width: 100%;
             display: flex;
 
@@ -48,16 +48,16 @@
 
         .navigate-box {
             /*导航盒子*/
-            color: rgb(183, 193, 197);
+            color: rgb(255, 255, 255);
             height: 50px;
-            background-color: #464242;
+            background-color: #ed6c09;
             line-height: 50px;
             /*文字水平居中*/
             box-shadow: 2px 5px 50px rgba(6, 1, 15, 0.479);
             /*盒子阴影*/
             display: flex;
             /*flex默认按主轴排列，使得li横向排列*/
-       
+
 
         }
 
@@ -66,20 +66,20 @@
             display: flex;
             /*flex默认按主轴排列，使得li横向排列*/
             margin: 0 50px;
-            
+
 
 
         }
 
         .navigate-box-li-1 {
             text-align: center;
-       
+
         }
 
         .navigate-box-li-1:hover .navigate-box-ul-2 {
             /*恢复隐藏的下拉列表*/
             display: block;
-    
+
         }
 
         .navigate-box-li-1:hover {
@@ -94,7 +94,7 @@
             /*盒子阴影*/
             display: none;
             border-radius: 5px;
-           
+
 
 
         }
@@ -103,20 +103,20 @@
 
         .navigate-box-li-2 {
             width: 100px;
-           
+
 
         }
 
         .navigate-box-li-2:hover {
-            background-color: rgb(18, 17, 19);
+            background-color: rgb(13, 13, 13);
             border-radius: 6px;
-          
+
         }
 
         .navigate-box-li-2:not(:first-child) {
             /*设置分隔线但是排除第一个li*/
             border-top: 1px dashed #ebedee;
-            
+
         }
 
         /*------------------------------------*/
@@ -230,6 +230,17 @@
             height: 12px;
             opacity: 1;
         }
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        /*------------------------------------*/
+        
     </style>
 
 
@@ -326,7 +337,7 @@
             </div>
 
 
-            <div class="slider-box">
+            <div class="slider-box"><!--轮播图-->
                 <div class="slider-wrapper">
                     <img src="images/bz01.png" alt="" />
                 </div>
@@ -358,6 +369,8 @@
             </div>
 
 
+        
+
 
 
 
@@ -377,6 +390,7 @@
 
 
     <script>
+        //轮播图-------------------------------------------------------------------------------------------
         let data = [
             { url: 'images/bz01.png', title: '夏日运动时间', color: ' rgb(202, 79, 161)' },
             { url: 'images/bz02.png', title: '夏日动画游乐场', color: ' rgb(100, 79, 161)' },
@@ -395,7 +409,7 @@
         let next = document.querySelector('.next')//右按钮
         let prev = document.querySelector('.prev')//左按钮
         let p = document.querySelector('.slider-footer p')//下文字
-        let slider = document.querySelector('.slider')//获取大盒子，做离开自动轮播
+        let slider = document.querySelector('.slider-box')//获取大盒子，做离开自动轮播
 
         //左右按钮
         let co = 0
@@ -424,7 +438,7 @@
         //鼠标离开自动轮播 | 鼠标经过停止自动轮播
         let timerId = setInterval(function () {
             next.click()//调用元素的事件
-        }, 1300)
+        }, 2500)
 
         slider.addEventListener('mouseleave', function () {
             timerId = setInterval(function () { next.click() }, 1300)//清除定时器时丧失了定义，重新定义     
@@ -450,6 +464,8 @@
 
 
         })
+
+    //轮播图-------------------------------------------------------------------------------------------
 
 
 
