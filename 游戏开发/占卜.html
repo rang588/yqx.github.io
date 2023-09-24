@@ -17,6 +17,13 @@
             color: #e609c8;
         }
 
+        a {
+            /* 链接*/
+            color: #f7f6f8;
+            text-decoration: none;
+
+        }
+
         .box {
             /*网页主标题div的盒子模型*/
 
@@ -81,65 +88,36 @@
         /*************************************以下css均为实验区域***********************************************/
         /*************************************以下css均为实验区域***********************************************/
         /*************************************以下css均为实验区域***********************************************/
-        .warpper-in {
-            width: 100%;
-            height: 300px;
-            background-color: #807575;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .one {
+            color: #bcbfc0;
+            height: 150px;
+            font-size: 50px;
+            text-align: center;
+
         }
 
-        .warpper-in-text {
-            resize: none;
-            /*禁止用户通过拖拽元素的边缘来改变其尺寸*/
-            outline: none;
-            /*隐藏文本域自带边框*/
-            font-size: 15px;
-            height: 200px;
-            flex: 10;
-        }
-
-        .warpper-in-anniu {
-            height: 100px;
-            cursor: pointer;
-            margin: 10px;
-            font-size: 20px;
-            flex: 2;
-        }
-
-        .warpper-out {
-            width: 100%;
-            height: 300px;
-            background-color: #87858a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .warpper-out-text {
-            resize: none;
-            /*禁止用户通过拖拽元素的边缘来改变其尺寸*/
-            outline: none;
-            /*隐藏文本域自带边框*/
-            font-size: 15px;
-            height: 200px;
-            flex: 10;
-        }
-
-        .analy {
-            /*分析去重效果*/
-            width: 100%;
+        .anniu {
+            float: left;
+            width: 200px;
             height: 50px;
-            background-color: #777272;
-            display: flex;
-            justify-content: end;
+            font-size: 16px;
+            display: block;
+            color: rgb(94, 89, 89);
+            border-style: outset;
+            border-width: 8px;
+            /*边框粗细*/
+            background-color: rgb(161, 161, 163);
+            border-color: #bbbbb7ee;
+            margin: 50px;
+            text-align: center;
+            line-height: 45px;
         }
 
-        .analy-wenzi {
-            display: none;
-            color: #06ebb2;
-            margin: 10px;
+        .anniu:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(67, 165, 136);
+            box-shadow: 10px 10px 10px 2px rgb(167, 149, 149);
+            /*阴影的x位置，阴影的y位置，模糊程度，阴影大小，阴影颜色*/
         }
     </style>
 
@@ -154,8 +132,7 @@
     </div>
 
     <div class="daohang">
-        <a href="index.html">返回首页</a>
-        <a href="实验室.html">实验室</a>
+        <a href="../index.html">返回首页</a>
     </div>
 
 
@@ -170,54 +147,60 @@
     <!----------------------------------------以下均为html实验区域-------------------------------------------->
     <!----------------------------------------以下均为html实验区域-------------------------------------------->
 
+    <!-- anniu.disabled=true没有禁用按钮（中文回答） -->
     <div class="max-exter-box">
-
-        <div class="warpper-in"><!--外包装盒子-in-->
-            <textarea class="warpper-in-text" placeholder="请输入关键字" id="text1"></textarea>
-            <textarea class="warpper-in-text" placeholder="请输入文本" id="text2"></textarea>
-            <button class="warpper-in-anniu" id='anniu1'>统计关键字数量</button>
-        </div>
-
-
-        <div class="analy">
-            <span class="analy-wenzi" id="analy-count">关键字出现次数： 0</span>
-        </div>
-
-
-    </div>
-
-
-
+        <div class="one" id="one"></div>
+        <button id="anniu" class="anniu" onclick="choujiang()">占卜</button>
+        <div id="cnt">占卜次数：3次</div>
     </div>
 
     <script>
-        let inanniu1 = document.querySelector('#anniu1')//获取统计按钮
-        let inanniu2 = document.querySelector('#anniux')//获取清零按钮
-        let intext1 = document.querySelector('#text1')//获取关键字文本域
-        let intext2 = document.querySelector('#text2')//获取输入文本域
-        let analyset = document.querySelector('#analy-count')//获取分析
 
-        inanniu1.addEventListener('click', function () {
-            let word = intext1.value//将关键字存储于一个变量
-            let text =intext2.value//将文本存储于一个变量
-            let regex = new RegExp(word, "g");
-            let wordcount = 0//关键字数量
+        // *************抽奖函数区****************
+        let co = 3, score = 0
+        function choujiang() {//co为抽奖次数
+            if (co == 0) { alert(`占卜次数已经用完,运势总分：${score}`); return; }
+            let anniu = document.getElementById('anniu')
+            let award = ['上上签：鸿蒙好运', '上签：小吉小利', '中上签：小吉', '中签：平平常常', '中下签：小凶', '下签：运势凶险', '下下签：黑脸非酋']
+            let t = document.getElementById('one')
+            let random = Math.random() * 100
+            if (random >= 85.68) t.innerHTML = award[0], one.style.backgroundColor = "#b905dd", score += 6, alert(`运势得分+6`)
+            else if (random >= 71.40) t.innerHTML = award[1], one.style.backgroundColor = "#13ecb6", score += 3, alert(`运势得分+3`)
+            else if (random >= 57.12) t.innerHTML = award[2], one.style.backgroundColor = "#04fa4e", score += 1, alert(`运势得分+1`)
+            else if (random >= 42.84) t.innerHTML = award[3], one.style.backgroundColor = "gray", score += 0, alert(`运势得分无变化`)
+            else if (random >= 28.56) t.innerHTML = award[4], one.style.backgroundColor = "#dd5a5a", score -= 1, alert(`运势得分-1`)
+            else if (random >= 14.28) t.innerHTML = award[5], one.style.backgroundColor = "#ff0000", score -= 3, alert(`运势得分-3`)
+            else t.innerHTML = award[6], one.style.backgroundColor = "#140101", score -= 6, alert(`运势得分-6`)
+            console.log(random)
+            co--
+            let cnt = document.getElementById('cnt')
+            cnt.innerHTML = `占卜次数: ${co}次`
+            anniu.innerHTML = `冷却中`
+            //启动定时冷却
+            anniu.disabled = true
+            icetime(4)
+        }
 
-            while (regex.exec(text)) {
-                wordcount++;
-            }
+        function icetime(i) {
+            let t = setInterval(function () {
+                i--
+                anniu.innerHTML = `冷却中(${i})`
+                if (i == -1) {
+                    clearInterval(t);
+                    anniu.disabled = false;
+                    if (co == 0) anniu.innerHTML = `运势结算`;
+                    else anniu.innerHTML = `占卜`;
+                }
 
-            analyset.style.display = 'block'
-            analyset.innerHTML = `【分析结果】 关键字『${intext1.value}』的数量为: 『${wordcount}』`
-        })
 
+            }, 1000)
 
-
+        }
+        // *************抽奖函数区****************
 
 
 
     </script>
-
 
 
 </body>

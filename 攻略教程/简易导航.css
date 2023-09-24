@@ -1,0 +1,16 @@
+ .simple-navigate-box a {
+     display: inline-block;
+     /*a属于行内元素，没有高度，转化为行内块元素*/
+     /* height: 40px; */
+     padding: 0 20px;
+     /*分别与上下的间隔 左右a的间隔*/
+     font-size: 16px;
+     color: rgb(255, 255, 255);
+
+ }
+
+ .simple-navigate-box a:hover {
+     color: rgb(255, 255, 255);
+     background-color: rgb(0, 0, 0);
+
+ }

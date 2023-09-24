@@ -1,0 +1,36 @@
+.bulletin-box{
+    background-color: rgba(54, 54, 54, 0.378);
+    width: 400px;
+    height:100%;
+    margin: 0 100px;
+    border-radius: 30px;
+}
+.bulletin-box h3 {
+    background-color: #000000ee;
+    height: 50px;
+    border-bottom: 1px dotted #9ca3af;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+    /*文本居中*/
+    padding-left: 15px;
+    /*h3没有内边框 不会撑开盒子*/
+    text-align: center;
+}
+
+.bulletin-box p {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #000000;
+}
+
+.bulletin-box a {
+    padding-left: 20px;
+    color: #fcfcfc;
+    display: block;
+}
+
+.bulletin-box a:hover {
+    background-color: #000000;
+}

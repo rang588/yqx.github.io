@@ -1,0 +1,45 @@
+ * {
+     /*清除各个元素的默认内外边框*/
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     /*删除li的小圆点*/
+     text-decoration: none;
+ }
+
+ a {
+     /* 链接*/
+     color: #f7f6f8;
+     text-decoration: none;
+
+ }
+
+
+
+ .window-box {
+     /* 窗口盒子 */
+     background-color: #e4e4e4;
+     width: 100%;
+     display: flex;
+
+ }
+
+
+ .max-exter-box {
+     /*最大外套盒子*/
+     height: 5665px;
+     width: 1190px;
+     background-color: #fdf6f6;
+     margin: 0 auto;
+     /*外壳居中*/
+
+ }
+
+.son-box-1{
+    /*目前一个装轮播图，一个装公告*/
+    background-color: #ffffff;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}

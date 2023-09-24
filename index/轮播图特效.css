@@ -1,0 +1,100 @@
+ .slider-box {
+     background-color: #0d0c0c;
+     width: 560px;
+     height: 400px;
+     display: flex;
+     flex-direction: column;
+     /*将flex默认的方向改为垂直分布*/
+ }
+
+.slider-wrapper {
+    /*上部images框*/
+    width: 100%;
+    height: 320px;
+}
+
+.slider-wrapper img {
+    /*上部images*/
+    width: 100%;
+    height: 100%;
+}
+
+.slider-footer {
+    /*下部框*/
+    height: 80px;
+    background-color: rgb(202, 79, 161);
+    padding: 12px 12px 0 12px;
+    display: flex;
+}
+
+.slider-footer .toggle {
+    /*下部框-左右按钮框*/
+    right: 0;
+    margin-top: 10px;
+    margin-left: auto;
+    /* 将右边的项目推到右侧 */
+}
+
+.slider-footer .toggle button {
+    /*下部框-左右按钮框-按钮*/
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+    appearance: none;
+    /*隐藏浏览器默认样式影响*/
+    border: none;
+    /*隐藏边框*/
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    /*鼠标样式为手指*/
+}
+
+.slider-footer .toggle button:hover {
+    /*下部框-左右按钮框-按钮-特效*/
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.slider-footer .present {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slider-footer p {
+    /*下部框-文字介绍*/
+    margin: 0;
+    color: #f1ecec;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.slider-indicator {
+    /*下部框-圆点框*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    /*圆点横着排列*/
+}
+
+.slider-indicator li {
+    /*下部框-圆点*/
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    border-radius: 50%;
+    background: #85d3bf;
+    opacity: 0.4;
+    /*未激活时（实体化）值底下*/
+    cursor: pointer;
+    /*鼠标样式为手指*/
+}
+
+.slider-indicator li.active {
+    /*下部框-圆点-激活态*/
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}

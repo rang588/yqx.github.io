@@ -5,7 +5,7 @@
     <meta charset="UTF-8"> <!--charset 字符集  uniform-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js实验室</title>
+    <title>统计文本字数</title>
     <link rel="stylesheet" href="style.css"><!--引入css -->
     <link rel="icon" href="images/字典.ico"><!--引入网页图标 -->
 
@@ -14,7 +14,13 @@
             /*清除各个元素的默认内外边框*/
             padding: 0;
             margin: 0;
-            color: #e609c8;
+        }
+
+        a {
+            /* 链接*/
+            color: #f7f6f8;
+            text-decoration: none;
+
         }
 
         .box {
@@ -30,6 +36,9 @@
             background-color: rgba(68, 90, 99, 0.849);
             line-height: 100px;
             text-align: center;
+            font-size: xx-large;
+            color: rgb(255, 204, 0);
+
 
 
         }
@@ -150,12 +159,11 @@
 
 
     <div class="box">
-        <em class="headline">js实验室</em>
+        <em class="headline">统计文本字数</em>
     </div>
 
     <div class="daohang">
-        <a href="index.html">返回首页</a>
-        <a href="实验室.html">实验室</a>
+        <a href="../index.html">返回首页</a>
     </div>
 
 
@@ -174,17 +182,11 @@
 
         <div class="warpper-in"><!--外包装盒子-in-->
             <textarea class="warpper-in-text" placeholder="请输入文字串"></textarea>
-            <button class="warpper-in-anniu" id='anniu1'>去重</button>
-            <button class="warpper-in-anniu" id='anniu2'>统计文字数量</button>
-            <button class="warpper-in-anniu" id='anniux'>清零</button>
+            <button class="warpper-in-anniu" id='anniu1'>统计文字数量</button>
         </div>
 
-        <div class="warpper-out"><!--外包装盒子-out-->
-            <textarea class="warpper-out-text" placeholder="结果为"></textarea>
-        </div>
 
         <div class="analy">
-            <span class="analy-wenzi" id="analy-set">去重前字数/去重后字数 : 0/0</span>
             <span class="analy-wenzi" id="analy-count">文本字符数： 0</span>
         </div>
 
@@ -193,53 +195,20 @@
 
     <script>
 
-        let inanniu1 = document.querySelector('#anniu1')//获取去重按钮
-        let inanniu2 = document.querySelector('#anniu2')//获取统计文字按钮
-        let inanniux = document.querySelector('#anniux')//获取清零按钮
+        let inanniu1 = document.querySelector('#anniu1')//获取统计文字按钮
         let intext = document.querySelector('.warpper-in-text')//获取输入文本域
-        let outtext = document.querySelector('.warpper-out-text')//获取输出文本域
-        let analyset = document.querySelector('#analy-set')//获取去重分析
         let analycount = document.querySelector('#analy-count')//获取文字统计分析
-
-        let runing = 0 //标记是几号功能在运行
-
-
-        //去重-------------------------------------------------
-        inanniu1.addEventListener('click', function () {
-            if (runing != 0 && runing != 1) { alert('请先清零后在使用其他功能'); return; }//有功能正在运行，且不是自己
-            let t = new Set(intext.value)
-            let s = [...t]
-            outtext.value = `${s.join('')}`
-            analyset.style.display = 'block'
-            analyset.innerHTML = `【分析结果】 去重前数量: 『${intext.value.length}』 去重后数量: 『${outtext.value.length}』`
-            runing = 1
-        })
 
 
         //统计文字字数--------------------------------------------------
-        inanniu2.addEventListener('click', function () {
-            if (runing != 0 && runing != 2) { alert('请先清零在使用其他功能'); return; }//有功能正在运行，且不是自己
+        inanniu1.addEventListener('click', function () {
             analycount.style.display = 'block'
             analycount.innerHTML = `【分析结果】 文本字符数： ${intext.value.replace(/\s+/g, '').length}`
-            runing = 2
             //    /：正则表达式的开始和结束都使用斜杠 / 进行标识。
             //    \s：表示匹配任何空白字符，包括空格、制表符、换行符等。
             //    +：表示匹配前面的表达式（\s）一次或多次。
             //    g：表示全局匹配，即匹配字符串中所有满足条件的部分，而不仅仅是第一个。
-
         })
-
-
-        //清零--------------------------------------------------
-        inanniux.addEventListener('click', clear)
-
-        function clear() {
-            intext.value = ''
-            outtext.value = ''
-            analyset.style.display = 'none'
-            analycount.style.display = 'none'
-            runing = 0
-        }
 
 
 

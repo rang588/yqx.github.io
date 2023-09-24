@@ -1,0 +1,70 @@
+  .navigate-box {
+      /*导航盒子*/
+      color: rgb(255, 255, 255);
+      height: 50px;
+      background-color: #ed6c09;
+      line-height: 50px;
+      /*文字水平居中*/
+      box-shadow: 2px 5px 50px rgba(6, 1, 15, 0.479);
+      /*盒子阴影*/
+      display: flex;
+      /*flex默认按主轴排列，使得li横向排列*/
+  }
+ 
+ .navigate-box-ul-1 {
+     width: 100px;
+     display: flex;
+     /*flex默认按主轴排列，使得li横向排列*/
+     margin: 0 50px;
+
+
+
+ }
+
+ .navigate-box-li-1 {
+     text-align: center;
+
+ }
+
+ .navigate-box-li-1:hover .navigate-box-ul-2 {
+     /*恢复隐藏的下拉列表*/
+     display: block;
+
+ }
+
+ .navigate-box-li-1:hover {
+     background-color: #617377;
+     z-index: 1000;
+     /*在触发li的时候将z-index保证下拉列表不会被div遮挡*/
+ }
+
+ .navigate-box-ul-2 {
+     background-color: #464242;
+     box-shadow: 2px 5px 50px rgba(6, 1, 15, 0.479);
+     /*盒子阴影*/
+     display: none;
+     border-radius: 5px;
+
+
+
+ }
+
+
+
+ .navigate-box-li-2 {
+     width: 100px;
+
+
+ }
+
+ .navigate-box-li-2:hover {
+     background-color: rgb(13, 13, 13);
+     border-radius: 6px;
+
+ }
+
+ .navigate-box-li-2:not(:first-child) {
+     /*设置分隔线但是排除第一个li*/
+     border-top: 1px dashed #ebedee;
+
+ }

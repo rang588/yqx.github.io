@@ -1,0 +1,59 @@
+ * {
+     /*清除各个元素的默认内外边框*/
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     /*删除li的小圆点*/
+     text-decoration: none;
+ }
+
+ a {
+     /* 链接*/
+     color: #f7f6f8;
+     text-decoration: none;
+
+ }
+
+
+
+ .window-box {
+     /* 窗口盒子 */
+     background-color: #e4e4e4;
+     width: 100%;
+ }
+
+
+ .max-exter-box {
+     /*最大外套盒子*/
+     width: 1190px;
+     background-color: #fdf6f6;
+     margin: 0 auto;
+     border-left: 0.1px solid #a4a4a475;
+     border-right: 0.1px solid #a4a4a475;
+     
+ }
+
+ .simple-navigate-box {
+     width: 100%;
+     height: 50px;
+     background-color: #828282;
+     line-height: 50px;
+ }
+
+
+ .title-box {
+     width: 100%;
+     height: 230px;
+     background-color: #ffffff;
+     line-height: 230px;
+     border-top: 0.1px solid #a4a4a475;
+     border-bottom: 0.1px solid #a4a4a475;
+     
+ }
+
+ .article-box {
+    background-color: #ffffff;
+    width: 1100px;
+    margin: 0 auto ;
+
+ }
